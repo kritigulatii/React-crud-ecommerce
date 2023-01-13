@@ -1,0 +1,61 @@
+.container-2{
+    display: flex;
+}
+.sidebar{
+    background: #000;
+    color: #fff;
+    height: 100vh;
+    width: 120%;
+    transition: all 0.5s;
+    position: fixed;
+    z-index: 1;
+    cursor: pointer;
+}
+.top_section{
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+    padding:20px 15px;
+    gap: 40px;
+}
+.logo{
+    font-size: 30px;
+}
+.bars{
+    display: flex;
+    font-size: 25px;
+    margin-left: 50px;
+}
+.link{
+    display: flex;
+    color: #fff;
+    padding: 10px 15px;
+    gap: 15px;
+    transition: all 0.5s;
+    text-decoration: none;
+}
+.link:hover{
+    background:lightskyblue;
+    color: #000;
+    transition: all 0.5s;
+}
+.active{
+    background: lightskyblue;
+    color: #000;
+}
+.icon, .link_text{
+    font-size: 20px;
+}
+
+i{
+    cursor: pointer;
+}
+
+.welcome-text{
+    text-transform: capitalize;
+    margin: 0;
+}
+
+.fas.fa-user-tie{
+    padding-top: 20px;
+}

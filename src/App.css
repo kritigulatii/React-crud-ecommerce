@@ -36,3 +36,51 @@
     transform: rotate(360deg);
   }
 }
+
+.container{
+margin-top: 150px;
+margin-left: 50px;
+}
+
+.create-edit-table{
+  display: flex;
+  justify-content: center;
+  border-collapse: collapse;
+ 
+}
+td.create-edit-table{
+  border-collapse: collapse;
+  border: solid;
+  margin: 0 auto;
+  text-align: justify;
+  padding: 10px;
+}
+
+.form-create-back-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+label{
+  font-size: 20px;
+  font-weight: 600;
+}
+
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #FF0000;
+}
+
+h1{
+  text-transform: capitalize;
+}

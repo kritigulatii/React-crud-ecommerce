@@ -1,0 +1,78 @@
+.login {
+    width: 100%;
+    height: 82vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.login-inputs {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.navbar-login {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    background: black;
+  }
+
+input {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid black;
+    margin: 10px 0;
+}
+
+small {
+    color: red;
+}
+
+button {
+    padding: 10px;
+    width: 200px;
+    border: 1px solid black;
+    margin: 10px 0;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+
+.social {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 30px;
+}
+
+.social i {
+    font-size: 35px;
+}
+
+.social i.fab.fa-windows:hover {
+    color: #1da1f2;
+    cursor: pointer;
+}
+.social i.fab.fa-app-store-ios:hover {
+    color: #16a6e9;
+    cursor: pointer;
+}
+.social i.fab.fa-google-play:hover {
+    color: #ea4335;
+    cursor: pointer;
+}
+
+.fas.fa-sign-in-alt{
+    font-size: 18px;
+    text-align: center;
+    margin: 5px;
+}
+
+/* #61dafb */

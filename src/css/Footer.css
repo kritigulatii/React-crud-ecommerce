@@ -1,0 +1,31 @@
+   .footer-content {
+    display: flex;  
+    align-items: flex-end; 
+    justify-content: center;
+    flex-direction: column;  
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #000;
+    height: 50px;
+  }
+  
+  .footer-content h3 {
+    font-size: 2.1rem;  
+    font-weight: 500;  
+    margin: 5px; 
+    /* line-height: 3rem; */
+  }
+  
+  .footer-content p {
+    margin: 10px;  
+    line-height: 28px;  
+    font-size: 14px;  
+    color: #cacdd2;
+  }
+
+  .footer-link{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+  }

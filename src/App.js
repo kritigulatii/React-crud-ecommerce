@@ -1,25 +1,39 @@
-import logo from './logo.svg';
 import './App.css';
 
+import { useState } from 'react';
+import AppRoute from "./AppRoute"
+
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [token,setToken] = useState(localStorage.getItem('userToken') ?? null);
+
+  return <AppRoute/>
+  // return (
+  //   <div className="App">
+  //     {token ? <> <Navbar setToken={setToken}/><Products/> </> : <Login token={token} setToken={setToken}/>}
+  //   </div>
+  // );
+
+  //   const DeleteProduct = id => {
+//     var data = {
+//       "id": id,
+//     };
+//     fetch(`https://fakestoreapi.com/products/${id}`, {
+//       method: "DELETE",
+//       headers: {
+//         Accept: 'application/form-data',
+//         'Content-Type': 'application/json',
+//       },
+//       body: JSON.stringify(data),
+//     })
+//       .then((res) => res.json())
+//       .then((result) => {
+//         alert(result["message"]);
+//         if (result["status"] === "ok") {
+//           ProductGet();
+//         }
+//       });
+//   };
 }
 
 export default App;
+

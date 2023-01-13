@@ -1,0 +1,77 @@
+.create-back-btn {
+  display: flex;
+  justify-content: flex-end;
+  width: 95%;
+  gap: 20px;
+}
+
+button.back-btn {
+  position: absolute;
+  right: 5%;
+  margin-bottom: 20px;
+}
+
+table.hookstab,
+.hookstab th,
+.hookstab td {
+  border-collapse: collapse;
+  border: 2px solid;
+  margin: 0 auto;
+  text-align: justify;
+  padding: 10px;
+}
+
+table.hookstab {
+  width: 90%;
+}
+
+.hookstab tbody>tr{
+  text-transform: capitalize;
+}
+
+.hookstab tbody>tr:hover{
+  cursor: pointer;
+  font-weight: 600;
+}
+
+th {
+  background-color: hsl(210, 13%, 50%, 0.7);
+}
+
+.hookstab tr:nth-child(even){background-color:rgb(112, 128, 144,0.2)}
+
+.action-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.action-btn>button {
+  background-color: inherit;
+  color: black;
+  border: none;
+  padding: 0;
+  margin: 0;
+  width: 50px;
+}
+
+.productlist-loader {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.fas.fa-trash-alt:hover {
+  color: red;
+}
+
+.fas.fa-edit:hover {
+  color: green;
+}
+
+.fas.fa-layer-group {
+  padding-left: 10px;
+}
+
+.fas.fa-reply {
+  padding-left: 10px;
+}
