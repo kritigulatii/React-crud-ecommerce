@@ -1,19 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "../css/ProductChange.css";
+import Pagination from "react-js-pagination";
 
 function ProductChange() {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
   const [products, setProducts] = useState([]);
   const [searchData, setSearchData] = useState("");
-  // const [filter, setFilter] = useState({
-  //   title: "",
-  //   category: "",
-  // });
-  useEffect(() => {
-    ProductGet();
-  }, []);
+  const [currentPage, setCurrentPage] = useState(2);
+  const [postsPerPage, setPostsPerPage] = useState(6);
 
   const ProductGet = () => {
     setLoading(true);
@@ -25,11 +21,18 @@ function ProductChange() {
       .finally(() => setLoading(false));
   };
 
-  // const filterData = (product) => {
-  //   return searchData.toLowerCase() === ""
-  //         ? product
-  //         : product.title.toLowerCase().includes(searchData)
-  // };
+  useEffect(() => {
+    ProductGet();
+  }, []);
+
+  const handlePageChange = (pageNumber) => {
+    console.log(`active page is ${pageNumber}`);
+    setCurrentPage(pageNumber);
+  };
+
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentPosts = products.slice(indexOfFirstPost, indexOfLastPost);
 
   const DeleteProduct = (id) => {
     const confirm = prompt("Are u sure to delete?  y / n");
@@ -56,11 +59,12 @@ function ProductChange() {
   };
 
   const renderTable = () => {
-    return products
+    return currentPosts
       .filter((product) => {
         return searchData.toLowerCase() === ""
           ? product
-          : product.title.toLowerCase().includes(searchData) || product.category.toLowerCase().includes(searchData)
+          : product.title.toLowerCase().includes(searchData) ||
+              product.category.toLowerCase().includes(searchData);
       })
       .map((product) => {
         const setEditData = () => {
@@ -101,8 +105,7 @@ function ProductChange() {
   return (
     <div className="container">
       <h1>Products List</h1>
-      <div className="create-back-btn">        
-        
+      <div className="create-back-btn">
         <input
           className="searchInput"
           type="text"
@@ -133,11 +136,25 @@ function ProductChange() {
       <div className="productlist-loader">
         {loading && <div className="loader"></div>}
       </div>
+      <div className="pagination-background">
+        <Pagination
+          activePage={products}
+          itemsCountPerPage={postsPerPage}
+          totalItemsCount={products.length}
+          pageRangeDisplayed={4}
+          onChange={handlePageChange}
+          hideNavigation="false"
+          firstPageText={<i className="fas fa-clone"></i>}
+          lastPageText="Last"
+          itemClass="page-item"
+          linkClass="page-link"
+        />
+      </div>
       <Link to="/dashboard">
-          <button className="back-btn">
-            Back <i className="fas fa-reply" style={{ fontSize: "18px" }}></i>
-          </button>
-        </Link>
+        <button className="back-btn">
+          Back <i className="fas fa-reply" style={{ fontSize: "18px" }}></i>
+        </button>
+      </Link>
     </div>
   );
 }
