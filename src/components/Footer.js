@@ -5,7 +5,7 @@ function Footer() {
     return (
         <footer>
             <div className="footer-content">
-                <p>Copyright &Copy <span id="year"></span> <a className='footer-link' href="#">@Kriti-Gulati</a> </p>
+                <p>Copyright &Copy <span id="year"></span> <a className='footer-link' href="/login">@Kriti-Gulati</a> </p>
             </div>
         </footer>
     )

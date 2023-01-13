@@ -28,7 +28,7 @@ const Navbar = () => {
       <div className="navigation">
         <nav className="navbar">
           <div className="nav-links">
-            <h1>{username}</h1>
+            <h1><i className='fas fa-user-shield' style={{ fontSize: "36px" }}></i> {username}</h1>
               <button className="log-out-btn" onClick={() => { logOutHandler() }}>
                 <i className="fa fa-power-off" style={{ fontSize: "36px" }}></i>
               </button> 

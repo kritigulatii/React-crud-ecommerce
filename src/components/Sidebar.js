@@ -35,7 +35,7 @@ const Sidebar = ({ children }) => {
                 </div>
                 {
                     menuItem.map((item, index) => (
-                        <Link to={item.path} key={index} className="link">
+                        <Link to={item.path} key={index} className="link" activeclassName="active" >
                             <div className="icon">{item.icon}</div>
                             <div style={{ display: isOpen ? "block" : "none" }} className="link_text">{item.name}</div>
                         </Link>
@@ -44,7 +44,7 @@ const Sidebar = ({ children }) => {
                 }
                 
             </div>
-            {/* <main>{children}</main> */}
+            <main>{children}</main>
         </div>
     );
 };
